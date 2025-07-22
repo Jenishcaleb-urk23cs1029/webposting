@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 RCB-Themed Celebration: Virat Kohli's 36th Birthday! 🎂</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* RCB Gradient: Deep Red, Black, Gold (adjusted hex codes for a richer look) */
+      background: linear-gradient(to right, #C8102E, #000000, #FCD12A);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #F0F0F0; /* Light gray text for better contrast against the darker gradient */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for the card */
+      border-radius: 12px; /* Slightly more rounded corners */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+      padding: 30px;
+      color: #222222; /* Very dark gray for general text */
+      border: 2px solid #C8102E; /* RCB Red border */
+    }
+
+    h1 {
+      font-size: 65px; /* Slightly larger */
+      text-align: center;
+      background-color: #C8102E; /* RCB Red */
+      color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px 8px 0 0;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Stronger text shadow */
+      letter-spacing: 2px; /* Spacing out the letters */
+    }
+
+    h2 {
+      font-size: 40px; /* Increased size */
+      color: #333333;
+      margin-top: 0;
+      margin-bottom: 25px;
+      position: relative; /* For the underline effect */
+      padding-bottom: 10px;
+    }
+
+    h2::after { /* Stylish underline for h2 */
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100px; /* Width of the underline */
+      height: 4px;
+      background-color: #FCD12A; /* RCB Gold */
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 28px; /* Increased size */
+      color: #666666;
+      margin-top: 35px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #FCD12A; /* Golden separator for sections */
+      padding-bottom: 8px;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #444444;
+    }
+
+    .details {
+      margin-top: 30px; /* More space */
+      padding: 25px; /* More padding */
+      background-color: rgba(255, 255, 255, 0.95); /* Nearly opaque white background for details */
+      border-radius: 8px;
+      border: 1px solid #DDDDDD;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Inner shadow for depth */
+    }
+
+    .details p {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555555;
+    }
+
+    .details span {
+      font-weight: normal;
+      color: #000000;
+    }
+
+    a {
+      color: #C8102E; /* RCB Red for links */
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      color: #FCD12A; /* RCB Gold on hover */
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .kohli-image {
+        width: 300px;
+        height: auto;
+        border: 5px solid #FCD12A; /* Thicker gold border for the image */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+        margin-bottom: 25px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .kohli-image:hover {
+        transform: scale(1.08); /* Slightly more enlargement on hover */
+    }
+
+    .rcb-logo {
+        width: 100px; /* Size of the RCB logo */
+        height: auto;
+        margin: 10px auto 20px auto; /* Centered with margin */
+        display: block;
+        border: none; /* No border for the logo */
+    }
+
+    table {
+      width: 85%; /* Slightly wider table */
+      margin: 25px auto;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.95); /* Nearly opaque white for table */
+      border: 1px solid #C8102E; /* RCB Red border for table */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #EEE;
+      padding: 12px; /* More padding */
+      text-align: left;
+      color: #333;
+    }
+
+    th {
+      background-color: #F0F0F0;
+      font-weight: bold;
+      color: #666;
+    }
+
+    ol, ul {
+      text-align: left;
+      margin: 15px auto;
+      max-width: 65%; /* Wider lists */
+      padding-left: 28px;
+    }
+
+    ol li, ul li {
+      margin-bottom: 10px;
+      color: #333333;
+      line-height: 1.5;
+    }
+
+    .highlight {
+      color: #C8102E; /* RCB Red for highlighted text */
+      font-weight: bold;
+    }
+
+    .gold-text {
+      color: #FCD12A; /* RCB Gold for special text */
+      font-weight: bold;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 12px; /* More space between social links */
+      font-size: 22px; /* Larger social icons/text */
+      color: #C8102E; /* RCB Red for social links */
+      transition: color 0.3s ease-in-out;
+    }
+
+    .social-links a:hover {
+      color: #FCD12A; /* RCB Gold on hover */
+      text-decoration: none; /* No underline for social links on hover */
+    }
+
+    .team-motto {
+      font-style: italic;
+      color: #888888;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HTML Comment: Main Birthday Event Section -->
+  <div class="container">
+    <h1>BIRTHDAY EVENT 🎉</h1>
+    <h2>Join us to celebrate Virat Kohli's 36th Birthday! 🎂</h2>
+
+    <!-- RCB Logo Integration -->
+    <img src="C:\Users\jenis\OneDrive\Documents\Website\images\Virat-Kohli.jpg" alt="RCB Logo" class="rcb-logo">
+
+    <!-- Virat Kohli's Picture -->
+    <img src="C:\Users\jenis\OneDrive\Documents\Website\images\VIRAT-KOHLI-IPL-2025.jpg" alt="Virat Kohli in RCB Jersey" class="kohli-image"> <!-- Replace with actual image URL, perhaps in RCB jersey -->
+
+    <p>You're invited to a special birthday celebration for the legend, Virat Kohli! We'll have a fantastic evening filled with joy, good food, and great company. ✨ <span class="team-motto">E Sala Cup Namde!</span></p>
+
+    <div class="details">
+      <p>Date: <span class="highlight">09-09-2025</span></p>
+      <p>Time: <span class="gold-text">5:00 PM</span></p>
+      <p>Venue: <span><a href="#venue_map">DGS Center</a></span></p>
+      <p>Address: <span>Karunya Nagar</span></p>
+      <p>RSVP: <span><a href="mailto:JENISHCALEB@GMAIL.COM">JENISHCALEB@GMAIL.COM</a></span></p>
+      <p>Phone: <span><a href="tel:7010227***">7010227***</a></span></p>
+    </div>
+    <h3>Dinner Menu 🍽️</h3>
+    <ol>
+      <li>Appetizers
+        <ul>
+          <li>Spring Rolls 🥟</li>
+          <li>Paneer Tikka 🔥</li>
+        </ul>
+      </li>
+      <li>Main Course
+        <ol type="a">
+          <li>Butter Chicken 🍗</li>
+          <li>Vegetable Biryani 🍚</li>
+          <li>Dal Makhani 🍲</li>
+        </ol>
+      </li>
+      <li>Dessert
+        <ul>
+          <li>Gulab Jamun 🍩</li>
+          <li>Ice Cream Selection 🍦</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- HTML Comment: Schedule Section -->
+    <h3>Event Schedule ⏰</h3>
+    <p>Here's a glimpse of the evening's flow:</p>
+    <ol>
+      <li>5:00 PM - Arrival and Greetings 👋</li>
+      <li>5:30 PM - Cake Cutting 🎂</li>
+      <li>6:00 PM - Dinner Service Begins 🍽️</li>
+      <li>7:30 PM - Speeches & Tributes 🎤</li>
+      <li>8:00 PM - Socializing & Fun 🎉</li>
+    </ol>
+
+    <!-- HTML Comment: Important Information Table -->
+    <h3>Important Information ℹ️</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dress Code</td>
+          <td>Smart Casual 😎 (RCB Jersey optional but encouraged!) 🏏</td>
+        </tr>
+        <tr>
+          <td>Parking</td>
+          <td>Available on-site 🅿️</td>
+        </tr>
+        <tr>
+          <td>Special Requests</td>
+          <td>Please inform in advance for dietary restrictions. 📧</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- HTML Comment: Venue Location & Map Link -->
+    <h3 id="venue_map">Venue Location 📍</h3>
+    <p>The DGS Center is conveniently located in Karunya Nagar. See the map below for directions:</p>
+    <a href="https://maps.app.goo.gl/example" target="_blank">
+      
+    </a>
+    <p><small>(Click the image above or {Link: this link https://maps.app.goo.gl/example} for directions to the venue.)</small></p>
+
+    <!-- HTML Comment: Guest List (Unordered List Example) -->
+    <h3>A Few Expected Guests 👨‍👩‍👧‍👦</h3>
+    <ul>
+      <li>Close Family Members ❤️</li>
+      <li>Fellow Cricketers 🏏
+        <ul>
+          <li>AB De Villiers</li>
+          <li>Chris Gayle</li>
+        </ul>
+      </li>
+      <li>Friends 🥳</li>
+    </ul>
+
+    <!-- HTML Comment: Definition List Example -->
+    <h3>Key Terms 📚</h3>
+    <dl>
+      <dt>RSVP</dt>
+      <dd>Répondez s'il vous plaît (French for "Please respond") – used to request a response to an invitation. ✅</dd>
+      <dt>DGS Center</dt>
+      <dd>The chosen venue for the birthday celebration, located in Karunya Nagar. 🗺️</dd>
+    </dl>
+
+    <!-- HTML Comment: Social Media Links Section -->
+    <h3>Connect with Virat! 📱</h3>
+    <div class="social-links">
+      <a href="https://www.instagram.com/virat.kohli/" target="_blank">Instagram @virat.kohli</a>
+      <a href="https://x.com/imVkohli" target="_blank">X (formerly Twitter) @imVkohli</a>
+    </div>
+
+    <p style="margin-top: 30px;">We hope to see you there for this momentous occasion! 🙏</p>
+    <p class="team-motto">Let's make this birthday truly "Bold"! #PlayBold 🔴⚫🟡</p>
+  </div>
+
+</body>
+</html>
