@@ -1,0 +1,357 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more festive font choice */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fce4ec; /* Light pink/peach background, more birthday-like */
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #ff4081; /* Vibrant pink/red for header */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Larger, more celebratory font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input[type="text"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px 0 0 25px; /* Pill-shaped search input */
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1em;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #c51162; /* Deeper pink for button */
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #880e4f;
+    transform: scale(1.05); /* Slight pop on hover */
+}
+
+/* Main Section */
+main {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Banner Section */
+.banner {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ffccd2; /* Subtle border */
+}
+
+.welcome-section h2 {
+    color: #ff4081;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+/* Gallery Section (for Albums) */
+.gallery-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    color: #ff4081;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly larger min-width for images */
+    gap: 25px; /* More space between items */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Match welcome section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #fff; /* Background for the card */
+    border: 1px solid #ffccd2;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02); /* More pronounced lift and slight scale */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px; /* Consistent height for gallery thumbnails */
+    object-fit: cover;
+    display: block;
+    opacity: 0.95; /* Almost full opacity */
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+    opacity: 1;
+}
+
+.caption-box {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 64, 129, 0.85); /* Pinkish transparent background for captions */
+    color: white;
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    backdrop-filter: blur(3px); /* Slightly blur background for better readability */
+}
+
+.gallery-item:hover .caption-box {
+    opacity: 1;
+}
+
+/* Caption box positioning - these classes remain the same */
+.caption-box.top {
+    top: 0;
+    left: 0;
+}
+
+.caption-box.center {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.caption-box.bottom {
+    bottom: 0;
+    left: 0;
+}
+
+/* Content Sections (Alternating Image and Text) */
+.content-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffccd2;
+}
+
+.content-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.content-text {
+    flex: 1;
+    padding: 0 25px;
+}
+
+.content-text h2 {
+    color: #ff4081;
+    font-size: 2.4em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.content-text p {
+    line-height: 1.7;
+    text-align: justify;
+    font-size: 1.05em;
+}
+
+.content-image {
+    flex: 0 0 45%; /* Slightly larger image area */
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Match section borders */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Footer Section */
+footer {
+    background-color: #ff4081;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    border-top: 8px solid #c51162; /* Thicker, darker border for footer */
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .welcome-section h2, .gallery-section h2, .content-text h2 {
+        font-size: 2.2em;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .content-image {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .search-box {
+        margin-top: 10px;
+        width: 80%; /* Adjust width for mobile */
+        justify-content: center;
+    }
+    .search-box input[type="text"],
+    .search-box button {
+        width: auto;
+        border-radius: 25px; /* Make both ends rounded on smaller screens */
+    }
+    .search-box button {
+        margin-left: -1px; /* Overlap for continuous look */
+    }
+
+
+    main {
+        padding: 15px;
+    }
+
+    .banner {
+        border-radius: 10px;
+    }
+
+    .welcome-section, .content-section, .gallery-item {
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .welcome-section h2, .gallery-section h2, .content-text h2 {
+        font-size: 2em;
+    }
+
+    .content-section {
+        flex-direction: column;
+    }
+
+    .content-section:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .content-image {
+        flex: 1;
+        max-width: 100%;
+        margin-top: 25px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .welcome-section h2, .gallery-section h2, .content-text h2 {
+        font-size: 1.6em;
+    }
+    .search-box {
+        width: 95%;
+    }
+    .search-box input[type="text"] {
+        width: 70%;
+    }
+    .search-box button {
+        width: 30%;
+    }
+    .content-text p, .welcome-section p {
+        font-size: 0.95em;
+    }
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
