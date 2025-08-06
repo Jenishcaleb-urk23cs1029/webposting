@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JENISH Insurance Company - Vehicle Insurance</title>
+    
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins for a clean, professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Applying the Poppins font to the entire page */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5; /* A light grey background for a soft feel */
+        }
+
+        /* Custom styles for the hero section background */
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(0, 20, 60, 0.85), rgba(50, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom focus style for form inputs to match the theme */
+        .form-input:focus {
+            border-color: #3b82f6; /* A nice blue color on focus */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+            outline: none;
+        }
+        
+        /* Custom transition for smoother hover effects */
+        .nav-link, .login-button {
+            transition: all 0.3s ease-in-out;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- 
+      Fixed Horizontal Navigation Bar 
+      - Uses flexbox for alignment.
+      - 'fixed' class keeps it at the top.
+      - 'z-50' ensures it stays above other content.
+    -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo and Company Title -->
+            <div class="flex items-center space-x-3">
+                <!-- Gearbox SVG Logo -->
+                <svg class="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <div>
+                    <a href="#" class="text-2xl font-bold text-gray-800 leading-tight">JENISH Insurance</a>
+                    <p class="text-xs text-gray-500">Your Shield on the Road</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="#" class="nav-link text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1">Home</a></li>
+                <li><a href="#" class="nav-link text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1">Services</a></li>
+                <li><a href="#" class="nav-link text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1">Claims</a></li>
+                <li><a href="#" class="nav-link text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1">About Us</a></li>
+                <li><a href="#" class="nav-link text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+      Main Landing Page Section
+      - 'min-h-screen' makes it fill the viewport height.
+      - 'flex' and 'items-center' vertically center the content.
+      - 'pt-16' adds padding to prevent content from hiding under the fixed header.
+    -->
+    <main class="hero-section min-h-screen flex items-center justify-center pt-16">
+        <div class="container mx-auto px-6 py-12">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Left Side: Login Form -->
+                    <div class="text-white">
+                        <h1 class="text-4xl font-bold mb-2">Client Portal</h1>
+                        <p class="text-blue-200 mb-8">Access your policy and manage claims.</p>
+                        
+                        <form action="#" method="POST">
+                            <!-- Username/Policy Number Input -->
+                            <div class="mb-5">
+                                <label for="username" class="block mb-2 text-sm font-medium text-blue-100">Policy Number or Email</label>
+                                <input type="text" id="username" name="username" placeholder="e.g., POL123456789"
+                                       class="form-input w-full px-4 py-3 bg-gray-800/50 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+                            </div>
+                            
+                            <!-- Password Input -->
+                            <div class="mb-5">
+                                <label for="password" class="block mb-2 text-sm font-medium text-blue-100">Password</label>
+                                <input type="password" id="password" name="password" placeholder="••••••••"
+                                       class="form-input w-full px-4 py-3 bg-gray-800/50 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+                            </div>
+
+                            <!-- Remember Me & Forgot Password -->
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center">
+                                    <input id="remember" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-600">
+                                    <label for="remember" class="ml-2 text-sm font-medium text-gray-300">Remember me</label>
+                                </div>
+                                <a href="#" class="text-sm text-blue-300 hover:underline">Forgot Password?</a>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                    class="login-button w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-md px-5 py-3 text-center hover:scale-105 transform">
+                                Secure Login
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right Side: Thematic Content/Image -->
+                    <div class="hidden md:block text-center text-white p-8">
+                         <svg class="w-48 h-48 mx-auto text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                         </svg>
+                        <h2 class="text-3xl font-bold mt-6">Peace of Mind, Guaranteed.</h2>
+                        <p class="mt-4 text-blue-200">
+                            With JENISH Insurance, you're not just a policyholder, you're a partner. We provide reliable coverage and exceptional service when you need it most.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
