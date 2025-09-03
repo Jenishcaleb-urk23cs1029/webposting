@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payroll Calculator</title>
+  <link rel="stylesheet" href="style6a.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script6a.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>💼 Employee Payroll</h2>
+      <label>Basic Salary:</label>
+      <input type="number" id="basic" placeholder="Enter Basic Salary">
+
+      <label>HRA:</label>
+      <input type="number" id="hra" placeholder="Enter HRA">
+
+      <label>DA:</label>
+      <input type="number" id="da" placeholder="Enter DA">
+
+      <label>Incentives:</label>
+      <input type="number" id="inc" placeholder="Enter Incentives">
+
+      <button id="calc">Calculate Salary</button>
+
+      <div class="result" id="out">
+        <p>Gross Salary: <span id="gross"></span></p>
+        <p>Tax Amount: <span id="tax"></span></p>
+        <p>Net Salary: <span id="net"></span></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
